@@ -1,0 +1,9 @@
+# prototype code. fix for D7
+//Memcached
+$conf['cache_inc'] ='sites/all/modules/memcache/memcache.inc';
+$conf['memcache_key_prefix'] = 'prefix';
+$conf['memcache_servers'] = array(
+        '127.0.0.1:11211'       => 'default',
+);
+$conf['memcache_bins'] = array(
+  'cache'       => 'default',

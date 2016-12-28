@@ -1,0 +1,6 @@
+# SSL traffic is encrypted at the Loadbalancer level. Set this header to tell Drupal.
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
+   $_SERVER['HTTPS'] = 'on';
+}else{
+   $_SERVER['HTTPS']='';
+}

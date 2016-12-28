@@ -1,0 +1,14 @@
+<?php
+$cookie_domain = '.example.com';
+
+// Prep the $conf array.
+if (!is_array($conf)) {
+  $conf = array();
+}
+
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
+   $_SERVER['HTTPS'] = 'on';
+}else{
+   $_SERVER['HTTPS']='';
+}
+$conf['mimedetect_magic'] = '/usr/share/file/magic';
